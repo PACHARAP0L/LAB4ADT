@@ -5,9 +5,8 @@ public class IntegerSetTest {
         int failed = 0;
 
         IntegerSet a = new IntegerSet();
-        a.add(50);
-        a.add(70);
-        String s = "[50, 70]";
+        a.add(50);a.add(60);a.add(70);
+        String s = "[50, 60, 70]";
         if (a.toString().equals(s)) {
             System.out.println("Pass");
             passed++;
@@ -16,12 +15,10 @@ public class IntegerSetTest {
             System.out.println("Fail "+ a.toString());failed++;
         }
         
-
+        //test 2 ข้อมูลซ้ำ
         IntegerSet b = new IntegerSet();
-        b.add(50);
-        b.add(80);
-        String s1 = "[50, 80]";
-        
+        b.add(50);b.add(50);
+        String s1 = "[50]";
         if (b.toString().equals(s1)) {
             System.out.println("Pass");
             passed++;
@@ -29,7 +26,8 @@ public class IntegerSetTest {
         else{
             System.out.println("Fail "+ b.toString()); failed++;
         }
-        
+
+        //test 3  
 
         
         // --- สรุปผล ---

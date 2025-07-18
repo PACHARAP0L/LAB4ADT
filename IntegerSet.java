@@ -39,7 +39,7 @@ public class IntegerSet {
                 Numbers.add(x);
             } else {
                 for (int i = 0; i < Numbers.size(); i++) {
-                    if(i==Numbers.size()-1){
+                    if(i==Numbers.size()-1){ //เพิ่มเป็นตัวสุดท้าย
                         Numbers.add(x);
                         break;
                     }
@@ -50,7 +50,17 @@ public class IntegerSet {
                 }
             }
         }
-
+        CheckRep();
+     }
+     public void Insert(int p,Integer x){
+                Numbers.add(p, x);
+                CheckRep();
+    
+        
+     }
+     public void remove(Integer x){
+        Numbers.remove(x);
+        CheckRep();
      }
 
         public String toString(){
