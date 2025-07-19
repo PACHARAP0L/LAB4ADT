@@ -52,16 +52,29 @@ public class IntegerSet {
         }
         CheckRep();
      }
-     public void Insert(int p,Integer x){
-                Numbers.add(p, x);
-                CheckRep();
-    
-        
-     }
-     public void remove(Integer x){
-        Numbers.remove(x);
-        CheckRep();
-     }
+     /**
+     * ลบข้อมูล
+     * @param x
+     */
+    public void remove(Integer x){
+        if(x == null)
+         return;
+         Numbers.remove(x);
+    }
+    /**
+     * ตรวจสอบว่ามีเลขอยู่ในเซตไหม
+     * @return ture ถ้ามี x อยู่ในนั้น , flase ถ้าไม่มี
+     */
+    public boolean contains(Integer x){
+        return Numbers.contains(x);
+    }
+    /**
+     * ขนาดของเซต
+     * @return จำนวนสมาชิก
+     */
+      public int size() {
+        return Numbers.size();
+    }
 
         public String toString(){
             return Numbers.toString();
